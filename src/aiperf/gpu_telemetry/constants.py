@@ -28,7 +28,15 @@ DCGM_TO_FIELD_MAPPING = {
     "DCGM_FI_DEV_GPU_TEMP": "gpu_temperature",
     "DCGM_FI_DEV_XID_ERRORS": "xid_errors",
     "DCGM_FI_DEV_POWER_VIOLATION": "power_violation",
+    "DCGM_FI_DEV_MEM_COPY_UTIL": "mem_copy_util",
     "DCGM_FI_PROF_DRAM_ACTIVE": "dram_active",
+    "DCGM_FI_PROF_SM_ACTIVE": "sm_active",
+    "DCGM_FI_PROF_SM_OCCUPANCY": "sm_occupancy",
+    "DCGM_FI_PROF_PIPE_TENSOR_ACTIVE": "tensor_active",
+    "DCGM_FI_PROF_PIPE_FP16_ACTIVE": "fp16_active",
+    "DCGM_FI_PROF_GR_ENGINE_ACTIVE": "gr_engine_active",
+    "DCGM_FI_PROF_PCIE_TX_BYTES": "pcie_tx_bytes",
+    "DCGM_FI_PROF_PCIE_RX_BYTES": "pcie_rx_bytes",
 }
 
 # GPU Telemetry Metrics Configuration
@@ -44,7 +52,15 @@ GPU_TELEMETRY_METRICS_CONFIG: list[tuple[str, str, MetricUnitT]] = [
     ("GPU Temperature", "gpu_temperature", TemperatureMetricUnit.CELSIUS),
     ("XID Errors", "xid_errors", GenericMetricUnit.COUNT),
     ("Power Violation", "power_violation", MetricTimeUnit.MICROSECONDS),
+    ("Memory Copy Util", "mem_copy_util", GenericMetricUnit.PERCENT),
     ("DRAM Active", "dram_active", GenericMetricUnit.PERCENT),
+    ("SM Active", "sm_active", GenericMetricUnit.PERCENT),
+    ("SM Occupancy", "sm_occupancy", GenericMetricUnit.PERCENT),
+    ("Tensor Active", "tensor_active", GenericMetricUnit.PERCENT),
+    ("FP16 Active", "fp16_active", GenericMetricUnit.PERCENT),
+    ("GR Engine Active", "gr_engine_active", GenericMetricUnit.PERCENT),
+    ("PCIe TX Bytes", "pcie_tx_bytes", MetricSizeUnit.BYTES),
+    ("PCIe RX Bytes", "pcie_rx_bytes", MetricSizeUnit.BYTES),
 ]
 
 

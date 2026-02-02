@@ -47,6 +47,38 @@ class TelemetryMetrics(AIPerfBaseModel):
         default=None,
         description="DRAM bandwidth utilization percentage",
     )
+    mem_copy_util: float | None = Field(
+        default=None,
+        description="Memory copy utilization percentage",
+    )
+    sm_active: float | None = Field(
+        default=None,
+        description="Streaming Multiprocessor active percentage",
+    )
+    sm_occupancy: float | None = Field(
+        default=None,
+        description="Streaming Multiprocessor occupancy percentage",
+    )
+    tensor_active: float | None = Field(
+        default=None,
+        description="Tensor Core active percentage",
+    )
+    fp16_active: float | None = Field(
+        default=None,
+        description="FP16 pipeline active percentage",
+    )
+    gr_engine_active: float | None = Field(
+        default=None,
+        description="Graphics engine active percentage",
+    )
+    pcie_tx_bytes: float | None = Field(
+        default=None,
+        description="PCIe transmit bytes",
+    )
+    pcie_rx_bytes: float | None = Field(
+        default=None,
+        description="PCIe receive bytes",
+    )
 
 
 class GpuMetadata(AIPerfBaseModel):
