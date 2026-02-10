@@ -62,7 +62,7 @@ GPU_TELEMETRY_METRICS_CONFIG: list[tuple[str, str, MetricUnitT]] = [
     ("GR Engine Active", "gr_engine_active", GenericMetricUnit.PERCENT),
     ("PCIe TX Bytes", "pcie_tx_bytes", MetricSizeUnit.BYTES),
     ("PCIe RX Bytes", "pcie_rx_bytes", MetricSizeUnit.BYTES),
-    ("Clock Throttle Reasons", "clock_throttle_reasons", GenericMetricUnit.BITMAP),
+    ("Clock Throttle Reasons", "clock_throttle_reasons", GenericMetricUnit.COUNT),
 ]
 
 
