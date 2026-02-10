@@ -37,6 +37,7 @@ DCGM_TO_FIELD_MAPPING = {
     "DCGM_FI_PROF_GR_ENGINE_ACTIVE": "gr_engine_active",
     "DCGM_FI_PROF_PCIE_TX_BYTES": "pcie_tx_bytes",
     "DCGM_FI_PROF_PCIE_RX_BYTES": "pcie_rx_bytes",
+    "DCGM_FI_DEV_CLOCK_THROTTLE_REASONS": "clock_throttle_reasons",
 }
 
 # GPU Telemetry Metrics Configuration
@@ -61,6 +62,7 @@ GPU_TELEMETRY_METRICS_CONFIG: list[tuple[str, str, MetricUnitT]] = [
     ("GR Engine Active", "gr_engine_active", GenericMetricUnit.PERCENT),
     ("PCIe TX Bytes", "pcie_tx_bytes", MetricSizeUnit.BYTES),
     ("PCIe RX Bytes", "pcie_rx_bytes", MetricSizeUnit.BYTES),
+    ("Clock Throttle Reasons", "clock_throttle_reasons", GenericMetricUnit.BITMAP),
 ]
 
 

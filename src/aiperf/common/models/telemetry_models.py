@@ -79,6 +79,10 @@ class TelemetryMetrics(AIPerfBaseModel):
         default=None,
         description="PCIe receive bytes",
     )
+    clock_throttle_reasons: int | None = Field(
+        default=None,
+        description="Bitmap of clock throttling reasons (GPU_IDLE=0x1, CLOCKS_SETTING=0x2, SW_POWER_CAP=0x4, HW_SLOWDOWN=0x8, SYNC_BOOST=0x10, SW_THERMAL=0x20, HW_THERMAL=0x40, HW_POWER_BRAKE=0x80, DISPLAY_CLOCKS=0x100)",
+    )
 
 
 class GpuMetadata(AIPerfBaseModel):
